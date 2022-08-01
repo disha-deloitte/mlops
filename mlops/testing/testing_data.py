@@ -1,15 +1,17 @@
 #pip install -U scikit-learn
 
 import argparse
-
 from random import randint
+import joblib
+import numpy as np
 from sklearn.linear_model import LinearRegression
 
 def testing_model(predictor):
     X_TEST = [[10,20,30]] #Create our testing data set, the ouput should be 10*10 + 2*20 + 3*30 = 230
-    outcome = predictor.predict(X=X_TEST) # Predict the ouput of the test data using the linear model
+    model = joblib.load(predictor)
+    outcome = model.predict(X=X_TEST) # Predict the ouput of the test data using the linear model
     
-    coefficients = predictor.coef_  #The estimated coefficients for the linear regression problem.
+    coefficients = model.coef_  #The estimated coefficients for the linear regression problem.
     
     print('Outcome: {} \n Coefficients: {}'.format(outcome, coefficients))
    
