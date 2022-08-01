@@ -1,5 +1,5 @@
 #pip install -U scikit-learn
-import numpy as np
+import numpy
 import argparse
 import joblib
 from random import randint
@@ -8,13 +8,15 @@ from sklearn.linear_model import LinearRegression
 
 def training_model(TRAIN_SET_COUNT,TRAIN_SET_LIMIT):
     #Create and append a randomly generated data set to the input and output
-    #TRAIN_SET_COUNT = np.load(TRAIN_SET_COUNT)
-    #TRAIN_SET_LIMIT = np.load(TRAIN_SET_LIMIT)
+    TRAIN_SET_COUNT = numpy.load(TRAIN_SET_COUNT)
+    TRAIN_SET_LIMIT = numpy.load(TRAIN_SET_LIMIT)
     for i in range(TRAIN_SET_COUNT):
         a = randint(0, TRAIN_SET_LIMIT)
         b = randint(0, TRAIN_SET_LIMIT)
         c = randint(0, TRAIN_SET_LIMIT)
     #Create a linear function for the output dataset 'Y'
+    TRAIN_INPUT = list()
+    TRAIN_OUTPUT= list()
     op = (10*a) + (2*b) + (3*c)
     TRAIN_INPUT.append([a,b,c])
     TRAIN_OUTPUT.append(op)
