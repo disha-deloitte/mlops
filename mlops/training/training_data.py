@@ -1,5 +1,5 @@
 #pip install -U scikit-learn
-
+import numpy as np
 import argparse
 import joblib
 from random import randint
