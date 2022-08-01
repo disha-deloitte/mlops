@@ -8,8 +8,8 @@ from sklearn.linear_model import LinearRegression
 
 def training_model(TRAIN_SET_COUNT,TRAIN_SET_LIMIT):
     #Create and append a randomly generated data set to the input and output
-    TRAIN_SET_COUNT = np.load(TRAIN_SET_COUNT)
-    TRAIN_SET_LIMIT = np.load(TRAIN_SET_LIMIT)
+    #TRAIN_SET_COUNT = np.load(TRAIN_SET_COUNT)
+    #TRAIN_SET_LIMIT = np.load(TRAIN_SET_LIMIT)
     for i in range(TRAIN_SET_COUNT):
         a = randint(0, TRAIN_SET_LIMIT)
         b = randint(0, TRAIN_SET_LIMIT)

@@ -10,8 +10,8 @@ def preprocess_data_model():
     # Create an empty list of the input training set 'X' and create an empty list of the output for each training set 'Y'
     TRAIN_INPUT = list()
     TRAIN_OUTPUT= list()
-    np.save('TRAIN_SET_LIMIT.npy', TRAIN_SET_LIMIT)
-    np.save('TRAIN_SET_COUNT.npy', TRAIN_SET_COUNT)
+    #np.save('TRAIN_SET_LIMIT.npy', TRAIN_SET_LIMIT)
+    #np.save('TRAIN_SET_COUNT.npy', TRAIN_SET_COUNT)
      
 
 if __name__ == "__main__":
