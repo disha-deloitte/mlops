@@ -25,6 +25,8 @@ def training_model(TRAIN_SET_COUNT,TRAIN_SET_LIMIT):
     
     joblib.dump(predictor, 'predictor.pkl')
 
+    
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
